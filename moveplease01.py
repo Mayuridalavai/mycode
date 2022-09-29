@@ -18,7 +18,7 @@ def main():
     shutil.move('ceph_storage/kerrigan.obj', 'ceph_storage/' + xname)
 
 
-main()  # this calls our main function
+    main()
 
 
 
