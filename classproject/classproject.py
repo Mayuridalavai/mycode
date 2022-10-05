@@ -9,20 +9,17 @@ import json
 
 
     
-BASE_URL = "https://api.fastforex.io/"
-API_KEY = "67f42a4e33-1fcc5e9d1e-rj7nis"
+URL = "https://api.fastforex.io/currencies?api_key=67f42a4e33-1fcc5e9d1e-rj7nis"
 
 printer = PrettyPrinter()
 
 
-def get_currencies(currencies):
-    endpoint = f"currencies?apiKey={API_KEY}"
-    url = BASE_URL + endpoint
-    data = get(url).json()['currencies']
+def get_currencies():
+    data = requests.get(URL)
+    data = data.json()
+    for currency in currencies["currencies"]:
+        print(data[])
 
-    data = list(data.items())
-
-    return data
 
 
 
