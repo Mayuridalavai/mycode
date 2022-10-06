@@ -14,11 +14,15 @@ URL = "https://api.fastforex.io/currencies?api_key=67f42a4e33-1fcc5e9d1e-rj7nis"
 printer = PrettyPrinter()
 
 
-def get_currencies():
-    data = requests.get(URL)
-    data = data.json()
-    for currency in currencies["currencies"]:
-        print(data[])
+def get_currencies(currencies):
+
+    list = []
+    for currency in currencies:
+        r = requests.get(currency)
+        data = r.json()
+        list.append(data.get())
+
+
 
 
 
